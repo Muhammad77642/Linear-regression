@@ -38,12 +38,9 @@ y = np.array([
 46, 49, 53, 56, 59, 62, 66, 69, 72, 75,
 79, 82, 85, 88, 92, 95, 98, 101, 105, 108
 ], dtype=np.float64)
-w = [2.71697906 ,0.83919046 ,  0.50227729]
-b = 9.467578410818566
-f_new = np.dot(x,w) + b
+w = [np.zeros((3,))]
+b = 0
 alpha = 0.001
-rmse = np.sqrt(np.mean(f_new - y )**2)
-print("RMSE" , rmse)
 iterations = 1000000
 def compute_cost(x,y,w,b):
     m = len(x)
